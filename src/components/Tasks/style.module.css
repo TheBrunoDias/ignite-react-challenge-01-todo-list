@@ -1,0 +1,203 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.68rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header>div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.created-tasks {
+  display: flex;
+  align-items: center;
+}
+
+
+.created-tasks>p {
+  color: var(--blue, #4EA8DE);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.created-tasks>span {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  background: var(--gray-400, #333);
+
+  color: var(--gray-200, #D9D9D9);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.completed-tasks {
+  display: flex;
+  align-items: center;
+}
+
+.completed-tasks>p {
+  color: var(--purple, #8284FA);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.completed-tasks>span {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  background: var(--gray-400, #333);
+
+  color: var(--gray-200, #D9D9D9);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.list {
+  margin: 1.563rem 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.emptyList {
+  display: flex;
+  padding: 4rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyList img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.emptyList p {
+  color: var(--gray-300, #808080);
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+.emptyList p strong {
+  display: block;
+}
+
+.emptyList p span {
+  display: block;
+}
+
+.task {
+  display: flex;
+  padding: 1rem;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray-400, #333);
+  background: var(--gray-500, #262626);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.task label {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--blue, #4EA8DE);
+  color: var(--gray-100, #F2F2F2);
+  background: transparent;
+  transition: background-color 0.1s, border 0.1s;
+}
+
+.task label:hover {
+  border: 2px solid var(--blue-dark, #1E6F9F);
+}
+
+.task label input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.task label svg {
+  transform: translateY(-100%);
+  transition: transform 0.1s;
+}
+
+.task p {
+  flex: 1;
+  color: var(--gray-100, #F2F2F2);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.task button {
+  border: 0;
+  background-color: transparent;
+  color: var(--gray-300, #F2F2F2);
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.task button:hover {
+  border: 0;
+  background-color: transparent;
+  color: var(--danger, #E25858);
+}
+
+.task[data-completed=true] {
+  border: 1px solid var(--gray-500, #262626);
+}
+
+.task[data-completed=true] label {
+  border: 2px solid var(--purple-dark, #5E60CE);
+  background-color: var(--purple-dark, #5E60CE);
+}
+
+.task[data-completed=true] label:hover {
+  border: 2px solid var(--purple, #8284FA);
+  background-color: var(--purple, #8284FA);
+}
+
+.task[data-completed=true] label svg {
+  transform: translateY(0);
+}
+
+.task[data-completed=true] p {
+  color: var(--gray-300, #808080);
+  text-decoration: line-through;
+}

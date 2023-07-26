@@ -1,0 +1,14 @@
+
+.main {
+  max-width: var(--container);
+  margin: auto;
+}
+
+@media(max-width: 768px){
+  html {
+    font-size: 14px;
+  }
+  .main {
+    padding: 0 2rem;
+  }
+}
